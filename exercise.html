@@ -4,7 +4,12 @@
 <meta charset="utf-8">
 
 <title>D0449763</title>
+<style>
 
+div{
+	float: left;
+}
+</style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
@@ -20,13 +25,25 @@ for(var i=0;i<items.length;i++){
    var name=items[i].Name;
    var imgURL=items[i].Picture1;
    var webURL=items[i].Website;
-   $("#attractions").append('<div>'+items[i].Name +'</div><div><a href="'+webURL+'"><img src="'+imgURL+'"height="200"width="200"></a></div>');
+   $("#attractions").append('<div id='+i+'><tr><td>'
+		   +items[i].Name +
+		   '<br><a href="'
+		   +webURL+
+		   '"><img src="'
+		   +imgURL+
+		   '"height="200"width="200"alt="無法顯示圖片"></a></td><tr></div>');
+   if (i == 10)
+	   {
+	   
+	   }
  }
  },
  error: function() {
  }
  });
 });
+
+
 
 </script>
 </head>
